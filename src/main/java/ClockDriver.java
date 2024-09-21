@@ -97,5 +97,25 @@ public class ClockDriver
         //  * Tick test for 11:59PM to 12:00AM
         //  * Tick test for 11:59AM to 12:00PM
         //  * Tick test for 12:59PM to 01:00PM
+        
+        ClockDisplay12Hour tickTest10 = new ClockDisplay12Hour(3, 32, "PM");
+        System.out.println("\tTick Test 10 PreTick - " + tickTest10.getTime());
+        tickTest10.timeTick();
+        System.out.println("\tTick Test 10 PostTick - " + tickTest10.getTime()); 
+        
+        ClockDisplay12Hour tickTest11 = new ClockDisplay12Hour(11, 59, "PM");
+        System.out.println("\tTick Test 11 PreTick - " + tickTest11.getTime());
+        tickTest11.timeTick();
+        System.out.println("\tTick Test 11 PostTick - " + tickTest11.getTime()); 
+        
+        ClockDisplay12Hour tickTest12 = new ClockDisplay12Hour(11, 59, "AM");
+        System.out.println("\tTick Test 12 PreTick - " + tickTest12.getTime());
+        tickTest12.timeTick();
+        System.out.println("\tTick Test 12 PostTick - " + tickTest12.getTime()); 
+        
+        ClockDisplay12Hour tickTest13 = new ClockDisplay12Hour(12, 59, "PM");
+        System.out.println("\tTick Test 13 PreTick - " + tickTest13.getTime());
+        tickTest13.timeTick();
+        System.out.println("\tTick Test 13 PostTick - " + tickTest13.getTime()); 
     }
 }
